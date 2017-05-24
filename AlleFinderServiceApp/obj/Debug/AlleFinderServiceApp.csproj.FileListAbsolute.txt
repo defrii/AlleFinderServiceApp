@@ -1,0 +1,10 @@
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\bin\AlleFinderServiceApp.dll.config
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\bin\AlleFinderServiceApp.dll
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\bin\AlleFinderServiceApp.pdb
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\bin\Newtonsoft.Json.dll
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\bin\Newtonsoft.Json.xml
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\obj\Debug\AlleFinderServiceApp.csprojResolveAssemblyReference.cache
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\obj\Debug\AlleFinderServiceApp.dll
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\obj\Debug\AlleFinderServiceApp.pdb
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\obj\Debug\AlleFinderServiceApp.Properties.Resources.resources
+D:\_Damianowe\Programming\C#\_Projects\AlleFinderServiceApp\AlleFinderServiceApp\obj\Debug\AlleFinderServiceApp.csproj.GenerateResource.Cache

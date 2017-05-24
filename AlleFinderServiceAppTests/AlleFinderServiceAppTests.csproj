@@ -1,0 +1,755 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A7998E9-1F76-4413-A78C-9A0646D64BA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlleFinderServiceAppTests</RootNamespace>
+    <AssemblyName>AlleFinderServiceAppTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.1\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.2.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.2.0\lib\netstandard1.1\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.2.0\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlleFinderServiceTest.cs" />
+    <Compile Include="Connected Services\AllegroServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.AddressInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.AfterSalesServiceConditionsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.AlcoholDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ArchiveRefundsListTypeStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.AttribStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.BidItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.BidListStruct2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.BillingDataType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.BlackListResStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.BlackListStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CategoriesListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CategoryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CatInfoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ChangedItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CompanyExtraDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CompanyInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CompanySecondAddressStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CountryInfoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.CreatedItemTemplateStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.DealsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doAddDescToItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doAddPackageInfoToPostBuyFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doAddToBlackListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doBidItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCancelBidItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCancelRefundFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCancelRefundWarningResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCancelTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doChangeItemFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doChangePriceItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doChangeQuantityItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCheckItemDescriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCheckNewAuctionExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doCreateItemTemplateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doFeedbackManyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doFeedbackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doFinishItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doFinishItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetAdminUserLicenceDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetArchiveRefundsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetBidItem2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetBlackListUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetCategoryPathResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetCatsDataCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetCatsDataLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetCatsDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetCountriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetDealsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetFavouriteCategoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetFavouriteSellersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetFeedbackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetFilledPostBuyFormsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetFreeDeliveryAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetItemFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetItemsImagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetItemsInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetItemsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetItemTemplatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMessageToBuyerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyAddressesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyBidItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyCurrentShipmentPriceTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyFutureItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyIncomingPaymentsRefundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyIncomingPaymentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyNotSoldItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyNotWonItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyPaymentsInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyPaymentsRefundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyPaymentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyPayoutsDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyPayoutsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMySellItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMySellRatingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMySoldItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetMyWonItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPaymentDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPaymentMethodsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPostBuyDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPostBuyFormsDataForBuyersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPostBuyFormsDataForSellersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPostBuyFormsIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetPostBuyItemInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetRefundsDealsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetRefundsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetRefundsReasonsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetRelatedItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellFormAttribsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellFormFieldsExtLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellFormFieldsExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellFormFieldsForCategoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellFormFieldsLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellFormFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSellRatingReasonsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSessionHandleForWidgetResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetShipmentDataForRelatedItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetShipmentDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetShipmentPriceTypesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetShopsTagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSiteJournalDealsInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSiteJournalDealsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSiteJournalInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSiteJournalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetStatesInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetSystemTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetTransactionsIDsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetUserIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetUserLicenceDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetUserLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetWaitingFeedbacksCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doGetWaitingFeedbacksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doLoginEncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doLoginWithAccessTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyAccount2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyAccountItemsCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyBillingItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyBillingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyContactResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyFeedback2LimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doMyFeedback2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doNewAuctionExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doQueryAllSysStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doQuerySysStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doRemoveFromBlackListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doRemoveItemTemplatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doRequestCancelBidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doRequestPayoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doRequestSurchargeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSellSomeAgainInShopResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSellSomeAgainResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSendEmailToUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSendPostBuyFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSendRefundFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSetFreeDeliveryAmountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSetShipmentPriceTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doSetUserLicenceDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doShowItemInfoExtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doShowUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.doVerifyItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FavouritesCategoriesStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FavouritesSellersStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FeedbackList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FeedbackResultStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FieldsValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FilledPostBuyFormsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FiltersListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FinishFailureStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.FutureItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.InvoiceDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemBilling.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemCatList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemDescriptionStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemImageList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemImagesStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemInfoExt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemPaymentOptions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemPostBuyDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemsListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemTemplatesStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ItemVariantStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.MessageToBuyerStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.MyAccountStruct2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.MyContactList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.MyFeedbackListStruct2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.NotSoldItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.NotWonItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PaymentMethodStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PaymentsInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PayoutPaymentsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PayoutRefundFromStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PayoutRefundToStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PharmacyDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PostageStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PostBuyFormDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PostBuyFormForBuyersDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PostBuyFormPackageInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PostBuyFormStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.PostBuyItemInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ProductStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ReasonInfoType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RefundListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RefundsDealsListType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RelatedItemsShipmentDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RelatedItemsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RelatedPersonsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RemovedItemTemplatesStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.RequestPayoutStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellFormFieldsForCategoryStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellFormType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellRatingAveragePerMonthStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellRatingAverageStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellRatingDetailStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SellRatingInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ShipmentDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ShipmentPriceTypeStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ShopsTagTypeStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.ShowUserFeedbacks.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SiteJournal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SiteJournalDealsInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SiteJournalDealsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SiteJournalInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SoldItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.StateInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.StructSellAgain.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.StructSellFailed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.SysStatusType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserBlackListAddResultStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserDataStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserIncomingPaymentRefundsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserIncomingPaymentStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserPaymentRefundsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserPaymentStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.UserPayoutStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.WaitFeedbackStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\AlleFinderServiceAppTests.AllegroServiceReference.WonItemStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AllegroServiceReference\service.wsdl" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlleFinderServiceApp\AlleFinderServiceApp.csproj">
+      <Project>{9fe382d6-d5bc-40f6-a07c-aaa45d143b0c}</Project>
+      <Name>AlleFinderServiceApp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AllegroServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AllegroServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AllegroServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AllegroServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
