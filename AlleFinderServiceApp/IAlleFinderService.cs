@@ -1,8 +1,8 @@
 ﻿using System.ServiceModel;
+using System.Threading.Tasks;
 
 namespace AlleFinderServiceApp
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IAlleFinderService" in both code and config file together.
     [ServiceContract]
     public interface IAlleFinderService
     {

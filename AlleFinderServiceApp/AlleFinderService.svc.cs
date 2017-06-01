@@ -2,6 +2,8 @@
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
+using System.Timers;
+using System.Threading.Tasks;
 using AlleFinderServiceApp.AllegroServiceReference;
 using AlleFinderServiceApp.Properties;
 using Newtonsoft.Json;
@@ -13,16 +15,24 @@ namespace AlleFinderServiceApp
     {
         private readonly servicePortClient _client = new servicePortClient();
         private readonly string _webapiKey = "fbf1731c";
+        private long _verKey;
         private string _sessionId;
         private CatInfoType[] _categoriesList;
+        private readonly Timer _updateTimer = new Timer(1000 * 60 * 60 * 24);
 
         public AlleFinderService()
         {
             string[] credentials = Resources.Credentials.Split(' ');
-            _client.doQuerySysStatus(3, 1, _webapiKey, out long verKey);
-            _sessionId = _client.doLoginEnc(credentials[0], credentials[1], 1, _webapiKey, verKey,
+            _client.doQuerySysStatus(3, 1, _webapiKey, out _verKey);
+            _sessionId = _client.doLoginEnc(credentials[0], credentials[1], 1, _webapiKey, _verKey,
                 out long userId, out long serverTime);
-            _categoriesList = _client.doGetCatsData(1, 0, _webapiKey, out verKey, out string verStr);
+            UpdateCategories();
+            _updateTimer.Elapsed += (sender, args) => UpdateCategories();
+        }
+
+        public void UpdateCategories()
+        {
+            _categoriesList = _client.doGetCatsData(1, 0, _webapiKey, out _verKey, out string verStr);
         }
 
         public string GetFiltersListByCategoryIdJson(string categoryId)
@@ -60,13 +70,13 @@ namespace AlleFinderServiceApp
             for (int i = 0; i < foundCategories.Length; ++i)
             {
                 categoriesPaths[i] = foundCategories[i].catName;
-                var cat_it = foundCategories[i];
+                var catIt = foundCategories[i];
                 while (true)
                 {
-                    if (cat_it.catParent != 0)
+                    if (catIt.catParent != 0)
                     {
-                        cat_it = _categoriesList.Single(n => n.catId == cat_it.catParent);
-                        categoriesPaths[i] = cat_it.catName + " -> " + categoriesPaths[i];
+                        catIt = _categoriesList.Single(n => n.catId == catIt.catParent);
+                        categoriesPaths[i] = catIt.catName + " -> " + categoriesPaths[i];
                     }
                     else break;
                 }
